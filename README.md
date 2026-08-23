@@ -1,7 +1,5 @@
 # JIG — Judicial Intelligence Graph (Phase 1)
 
-React + Cytoscape.js frontend using hardcoded mock data. No backend,
-no Neo4j, no LLM — everything lives in `src/data/mockData.js`.
 
 ## Run it
 
