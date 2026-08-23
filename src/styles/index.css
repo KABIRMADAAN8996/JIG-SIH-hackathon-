@@ -1,0 +1,211 @@
+/*
+  DESIGN DIRECTION — "Case Register"
+  Modelled on a physical court diary / cause-list register digitized
+  as-is: ruled rows, serial numbers, a typewriter face for case
+  numbers and dates, a condensed sans for the masthead, and an actual
+  rubber-stamp mark for the synthetic-data warning. Flat, hard-edged,
+  no shadows, no gradients.
+*/
+:root {
+  --paper: #E7E5DC;          /* ledger grey-green */
+  --paper-raised: #F3F2EA;
+  --card: #FBFAF4;
+  --ink: #17181A;            /* near-black register ink */
+  --ink-soft: #55584F;
+  --rule: #B9B6A6;           /* ruled-line grey */
+  --rule-heavy: #17181A;
+  --stamp-red: #7A2018;
+  --stamp-red-bg: #F1E4DF;
+  --stamp-green: #1F4D34;
+  --stamp-green-bg: #E4EBE1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--paper);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(23, 24, 26, 0.028) 0px,
+    rgba(23, 24, 26, 0.028) 1px,
+    transparent 1px,
+    transparent 34px
+  );
+  color: var(--ink);
+  font-family: "Noto Serif", Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.mono {
+  font-family: "Courier Prime", "Courier New", monospace;
+}
+
+.display {
+  font-family: "Oswald", Arial, sans-serif;
+}
+
+.app-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 90px;
+}
+
+/* ---------- Shared masthead (used by Dashboard + GraphView) ---------- */
+.masthead {
+  border-bottom: 3px double var(--rule-heavy);
+  padding: 22px 0 14px;
+  margin-bottom: 22px;
+}
+
+.masthead-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.reg-no {
+  font-family: "Courier Prime", monospace;
+  font-size: 11px;
+  color: var(--ink-soft);
+  letter-spacing: 0.5px;
+}
+
+.masthead-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.masthead-mark {
+  width: 46px;
+  height: 46px;
+  border: 2px solid var(--ink);
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.masthead-mark::before {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--ink);
+  inset: 4px;
+}
+
+.masthead h1 {
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  margin: 0;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.masthead .kicker {
+  font-family: "Courier Prime", monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin-top: 3px;
+}
+
+.masthead-right {
+  text-align: right;
+  font-family: "Courier Prime", monospace;
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+/* rubber-stamp style badge */
+.demo-stamp {
+  display: inline-block;
+  margin-top: 12px;
+  border: 2px solid var(--stamp-red);
+  color: var(--stamp-red);
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-size: 11.5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  transform: rotate(-1.4deg);
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--stamp-red-bg),
+    var(--stamp-red-bg) 3px,
+    transparent 3px,
+    transparent 6px
+  );
+}
+
+.view-btn {
+  font-family: "Courier Prime", monospace;
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  padding: 9px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex: none;
+}
+
+.view-btn:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.view-btn.ghost {
+  background: transparent;
+  color: var(--ink);
+}
+
+.view-btn.ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.mark {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 8px;
+  border: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  vertical-align: 1px;
+}
+
+.mark.red {
+  color: var(--stamp-red);
+  background: var(--stamp-red);
+}
+
+.mark.green {
+  color: var(--stamp-green);
+  background: var(--stamp-green);
+}
