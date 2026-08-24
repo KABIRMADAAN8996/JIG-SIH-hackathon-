@@ -1,0 +1,216 @@
+{
+  "dataset_name": "JIG — Synthetic Case Dataset (Dataset B)",
+  "reference_demo_date": "2026-08-19",
+  "cases": [
+    {
+      "case_id": "CASE-101",
+      "fir": {
+        "fir_number": "FIR-101/2026",
+        "filed_date": "2026-07-10",
+        "police_station": "Central Police Station",
+        "complainant": "Ravi Sharma",
+        "accused": "Arjun Mehta",
+        "sections": [
+          "applicable sections relating to alleged offence"
+        ]
+      },
+      "case": {
+        "case_number": "CR-101/26",
+        "registration_date": "2026-07-15",
+        "court_name": "District Court",
+        "status": "ongoing",
+        "chargesheet_filed": true,
+        "chargesheet_date": "2026-08-05",
+        "chargesheet_deadline": "2026-10-13"
+      },
+      "hearings": [
+        {
+          "hearing_id": "H-101",
+          "hearing_date": "2026-08-10",
+          "hearing_type": "initial hearing",
+          "outcome": "ongoing",
+          "next_hearing_date": "2026-08-25"
+        }
+      ],
+      "orders": [
+        {
+          "order_id": "O-101",
+          "order_date": "2026-08-10",
+          "order_type": "proceedings/scheduling order",
+          "judge_or_court": "District Court",
+          "summary": "The order recorded the proceedings and scheduled the next hearing."
+        }
+      ]
+    },
+    {
+      "case_id": "CASE-202",
+      "fir": {
+        "fir_number": "FIR-202/2026",
+        "filed_date": "2026-07-20",
+        "police_station": "North City Police Station",
+        "complainant": "Meena Kapoor",
+        "accused": "Priya Nair",
+        "sections": [
+          "relevant legal sections applicable to complaint"
+        ]
+      },
+      "case": null,
+      "hearings": [],
+      "orders": []
+    },
+    {
+      "case_id": "CASE-303",
+      "fir": {
+        "fir_number": "FIR-303/2026",
+        "filed_date": "2026-05-25",
+        "police_station": "East District Police Station",
+        "complainant": "Anil Kumar",
+        "accused": "Rohan Verma",
+        "sections": []
+      },
+      "case": {
+        "case_number": "CR-303/26",
+        "registration_date": "2026-06-10",
+        "court_name": "District Court",
+        "status": "ongoing",
+        "chargesheet_filed": true,
+        "chargesheet_date": "2026-07-20",
+        "chargesheet_deadline": "2026-09-08"
+      },
+      "hearings": [],
+      "orders": []
+    },
+    {
+      "case_id": "CASE-404",
+      "fir": {
+        "fir_number": "FIR-404/2026",
+        "filed_date": "2026-02-05",
+        "police_station": "South City Police Station",
+        "complainant": "Vikram Singh",
+        "accused": "Sameer Khan",
+        "sections": []
+      },
+      "case": {
+        "case_number": "CR-404/26",
+        "registration_date": "2026-02-15",
+        "court_name": "District Court",
+        "status": "ongoing",
+        "chargesheet_filed": true,
+        "chargesheet_date": "2026-03-20",
+        "chargesheet_deadline": "2026-05-16"
+      },
+      "hearings": [
+        {
+          "hearing_id": "H-401",
+          "hearing_date": "2026-04-15",
+          "hearing_type": "unspecified",
+          "outcome": "adjourned"
+        },
+        {
+          "hearing_id": "H-402",
+          "hearing_date": "2026-07-09",
+          "hearing_type": "unspecified",
+          "outcome": "adjourned"
+        }
+      ],
+      "orders": [
+        {
+          "order_id": "O-401",
+          "order_date": "2026-07-09",
+          "order_type": "adjournment order",
+          "judge_or_court": "District Court",
+          "summary": "The order recorded the adjournment."
+        }
+      ]
+    },
+    {
+      "case_id": "CASE-505",
+      "fir": {
+        "fir_number": "FIR-505/2026",
+        "filed_date": "2026-01-10",
+        "police_station": "Central District Police Station",
+        "sections": [
+          "SEC-318"
+        ],
+        "complainant": "Suresh Malhotra",
+        "accused": "Neha Kapoor"
+      },
+      "case": {
+        "case_number": "CR-505/26",
+        "registration_date": "2026-01-20",
+        "court_name": "District Court, Chennai",
+        "status": "ongoing",
+        "chargesheet_filed": false,
+        "chargesheet_deadline": "2026-04-20"
+      },
+      "hearings": [
+        {
+          "hearing_id": "H-501",
+          "hearing_date": "2026-05-15",
+          "hearing_type": "bail hearing",
+          "outcome": "adjourned"
+        },
+        {
+          "hearing_id": "H-502",
+          "hearing_date": "2026-07-05",
+          "hearing_type": "bail hearing",
+          "outcome": "adjourned"
+        }
+      ],
+      "orders": [
+        {
+          "order_id": "O-501",
+          "order_date": "2026-07-05",
+          "order_type": "adjournment order",
+          "judge_or_court": "presiding judge of the District Court, Chennai",
+          "summary": "The hearing was adjourned with no next date fixed, and noted the chargesheet had still not been filed."
+        }
+      ]
+    },
+    {
+      "case_id": "CASE-606",
+      "fir": {
+        "fir_number": "FIR-606/2026",
+        "filed_date": "2026-03-03",
+        "police_station": "West Zone Police Station",
+        "complainant": "Suresh Iyer",
+        "accused": "Deepak Rao",
+        "sections": [
+          "relevant legal sections applicable to complaint"
+        ]
+      },
+      "case": {
+        "case_number": "CR-606/26",
+        "registration_date": "2026-03-12",
+        "court_name": "District Court",
+        "status": "disposed",
+        "chargesheet_filed": true,
+        "chargesheet_date": "2026-04-10",
+        "chargesheet_deadline": "2026-06-10"
+      },
+      "hearings": [
+        {
+          "hearing_id": "H-601",
+          "hearing_date": "2026-05-02",
+          "hearing_type": "unspecified",
+          "outcome": "adjourned"
+        },
+        {
+          "hearing_id": "H-602",
+          "hearing_date": "2026-06-20",
+          "hearing_type": "unspecified",
+          "outcome": "disposed"
+        }
+      ],
+      "orders": [
+        {
+          "order_id": "O-601",
+          "order_date": "2026-06-20",
+          "order_type": "final disposal order",
+          "judge_or_court": "District Court",
+          "summary": "The final order recorded disposal of the case."
+        }
+      ]
+    }
+  ]
+}

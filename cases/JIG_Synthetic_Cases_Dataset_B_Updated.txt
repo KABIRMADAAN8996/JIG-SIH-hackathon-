@@ -1,0 +1,237 @@
+JIG — SYNTHETIC CASE DATASET (DATASET B)
+===============================================
+
+Reference/demo date used while designing and validating these cases:
+19 August 2026
+
+IMPORTANT:
+- These are fictional synthetic cases created for the JIG hackathon demo.
+- Cases 1–5 are the official five-case demo/test dataset.
+- Case 6 is a backend regression test fixture and is NOT part of the live demo sequence.
+- The actual system must use its runtime current_date, not this fixed reference date.
+- The graph schema remains limited to FIR, CASE, HEARING, and ORDER.
+- chargesheet_deadline is a per-case value supplied by the dataset; it is not a universal 90-day rule.
+
+
+CASE 1 — HEALTHY CASE
+=====================
+
+Purpose:
+Healthy case. Expected to trigger NO bottleneck rules.
+
+Expected result:
+Rule 1: NOT TRIGGERED
+Rule 2: NOT TRIGGERED
+Rule 3: NOT TRIGGERED
+Rule 4: NOT TRIGGERED
+Overall: CLEAN
+
+
+Narrative:
+
+State v. Arjun Mehta
+
+FIR No. FIR-101/2026 was filed at Central Police Station on 10 July 2026 following a complaint regarding an alleged theft. The complainant was Ravi Sharma and the accused was Arjun Mehta. The FIR cited the applicable sections relating to the alleged offence.
+
+The matter was registered as Case No. CR-101/26 before the District Court on 15 July 2026. The case is currently ongoing.
+
+The chargesheet has been filed on 5 August 2026. The chargesheet deadline recorded for this case was 13 October 2026.
+
+The first hearing, Hearing H-101, was held on 10 August 2026. The hearing was an initial hearing and its outcome was ongoing. The next hearing was scheduled for 25 August 2026.
+
+An order, Order O-101, was issued on 10 August 2026 recording the proceedings and scheduling the next hearing.
+
+
+CASE 2 — REGISTRATION DELAY
+============================
+
+Purpose:
+Tests Rule 1 only.
+
+Expected result:
+Rule 1: TRIGGERED
+Rule 2: NOT TRIGGERED
+Rule 3: NOT TRIGGERED
+Rule 4: NOT TRIGGERED
+Overall: RULE 1 ONLY
+
+
+Narrative:
+
+State v. Priya Nair
+
+FIR No. FIR-202/2026 was filed at North City Police Station on 20 July 2026 following a complaint regarding an alleged property-related offence. The complainant was Meena Kapoor and the accused was Priya Nair. The FIR recorded the relevant legal sections applicable to the complaint.
+
+As of 19 August 2026, no judicial Case has been registered against FIR-202/2026. The FIR remains awaiting registration of a case.
+
+No case number, case registration date, hearing, or court proceeding has been recorded for this matter.
+
+
+CASE 3 — HEARING SCHEDULING BOTTLENECK
+=======================================
+
+Purpose:
+Tests Rule 2 only.
+
+Expected result:
+Rule 1: NOT TRIGGERED
+Rule 2: TRIGGERED
+Rule 3: NOT TRIGGERED
+Rule 4: NOT TRIGGERED
+Overall: RULE 2 ONLY
+
+
+Narrative:
+
+State v. Rohan Verma
+
+FIR No. FIR-303/2026 was filed at East District Police Station on 25 May 2026 following a complaint regarding an alleged financial offence. The complainant was Anil Kumar and the accused was Rohan Verma.
+
+The matter was registered as Case No. CR-303/26 before the District Court on 10 June 2026. The case remains ongoing.
+
+The chargesheet has already been filed on 20 July 2026. The chargesheet deadline recorded for the case was 8 September 2026.
+
+As of 19 August 2026, no hearing has been scheduled or recorded for Case CR-303/26. No hearing or order has yet been created for the case.
+
+
+CASE 4 — STALLED PROCEEDINGS
+=============================
+
+Purpose:
+Tests Rule 3 only.
+
+Expected result:
+Rule 1: NOT TRIGGERED
+Rule 2: NOT TRIGGERED
+Rule 3: TRIGGERED
+Rule 4: NOT TRIGGERED
+Overall: RULE 3 ONLY
+
+
+Narrative:
+
+State v. Sameer Khan
+
+FIR No. FIR-404/2026 was filed at South City Police Station on 5 February 2026 following a complaint regarding an alleged assault. The complainant was Vikram Singh and the accused was Sameer Khan.
+
+The matter was registered as Case No. CR-404/26 before the District Court on 15 February 2026. The case is currently ongoing.
+
+The chargesheet was filed on 20 March 2026. The chargesheet deadline recorded for the case was 16 May 2026.
+
+The first hearing, Hearing H-401, took place on 15 April 2026 and was adjourned.
+
+The latest hearing, Hearing H-402, took place on 9 July 2026. Its outcome was recorded as "adjourned". No next hearing date was recorded.
+
+Order O-401 was issued on 9 July 2026 recording the adjournment.
+
+As of 19 August 2026, no subsequent hearing has been scheduled.
+
+
+CASE 5 — MULTIPLE BOTTLENECKS
+==============================
+
+Purpose:
+Tests multiple bottleneck rules simultaneously. This is the intended live-upload demo case.
+
+Expected result:
+Rule 1: NOT TRIGGERED
+Rule 2: NOT TRIGGERED
+Rule 3: TRIGGERED
+Rule 4: TRIGGERED
+Overall: RULES 3 + 4
+
+
+Narrative:
+
+State v. Neha Kapoor
+
+FIR No. FIR-505/2026 was filed at Central District Police Station on 10 January 2026 following a complaint regarding an alleged financial offence. The complainant was Suresh Malhotra and the accused was Neha Kapoor.
+
+The matter was registered as Case No. CR-505/26 before the District Court on 20 January 2026. The case is currently ongoing.
+
+The case record specifies a chargesheet deadline of 20 April 2026. As of 19 August 2026, the chargesheet has not been filed.
+
+The first hearing, Hearing H-501, was held on 15 May 2026 and was adjourned.
+
+The latest hearing, Hearing H-502, was held on 5 July 2026. Its outcome was recorded as "adjourned". No next hearing date was recorded.
+
+Order O-501 was issued on 5 July 2026 recording the adjournment.
+
+As of 19 August 2026, no subsequent hearing has been scheduled and the chargesheet remains unfiled.
+
+
+CASE 6 — CONCLUDED/DISPOSED CASE (BACKEND REGRESSION TEST)
+============================================================
+
+Purpose:
+Confirms that Rule 3 does not misfire on a case that concluded properly.
+
+This case exists only as a backend test fixture. It is NOT part of the live demo sequence.
+
+Expected result:
+Rule 1: NOT TRIGGERED
+Rule 2: NOT TRIGGERED
+Rule 3: NOT TRIGGERED
+Rule 4: NOT TRIGGERED
+Overall: CLEAN
+
+Important check:
+A hearing with no next hearing date must NOT automatically mean "stalled."
+The outcome must be checked. A properly "disposed" or "concluded" case must not trigger Rule 3.
+
+
+Narrative:
+
+State v. Deepak Rao
+
+FIR No. FIR-606/2026 was filed at West Zone Police Station on 3 March 2026 following a complaint regarding an alleged offence. The complainant was Suresh Iyer and the accused was Deepak Rao. The FIR recorded the relevant legal sections applicable to the complaint.
+
+The matter was registered as Case No. CR-606/26 before the District Court on 12 March 2026.
+
+The chargesheet was filed on 10 April 2026. The chargesheet deadline recorded for this case was 10 June 2026.
+
+The first hearing, Hearing H-601, was held on 2 May 2026 and was adjourned.
+
+The latest hearing, Hearing H-602, was held on 20 June 2026. Its outcome was recorded as "disposed." No next hearing date was recorded because none was needed — the case had concluded.
+
+Order O-601 was issued on 20 June 2026 recording the final disposal of the case.
+
+As of 19 August 2026, 60 days have passed since the latest hearing, which is well past the 30-day threshold used by Rule 3. However, because the latest hearing outcome is "disposed" and not a continuing state such as "adjourned" or "ongoing," Rule 3 must NOT trigger.
+
+
+Why Case 6 matters:
+
+Without this regression case, the original five cases cannot verify whether the outcome check in Rule 3 is actually implemented. Cases 4 and 5 both use "adjourned" outcomes, so an incorrect Rule 3 implementation that ignored outcome entirely and checked only "no next hearing date + more than 30 days" could still incorrectly pass all five original tests.
+
+Case 6 specifically catches that bug.
+
+
+FINAL OFFICIAL DEMO TEST MATRIX
+================================
+
+Case 1: No bottlenecks
+Case 2: Rule 1 only
+Case 3: Rule 2 only
+Case 4: Rule 3 only
+Case 5: Rules 3 + 4
+
+Case 6 is excluded from the official live demo/test matrix because it is a backend regression fixture.
+
+
+RULE REMINDERS
+==============
+
+Rule 1 — Case Registration Delay:
+FIR exists, no Case has been registered, and current date - filed_date > 15 days.
+
+Rule 2 — Hearing Scheduling Bottleneck:
+Case is registered, no Hearing exists, and current_date - registration_date > 60 days.
+
+Rule 3 — Stalled Proceedings:
+The latest Hearing has a continuing outcome such as "adjourned" or "ongoing", next_hearing_date is NULL, and current_date - hearing_date > 30 days.
+The outcome check is mandatory.
+An outcome such as "disposed" or "concluded" must prevent the rule from triggering.
+
+Rule 4 — Chargesheet Deadline Exceeded:
+chargesheet_filed = false and current_date > chargesheet_deadline.
+The deadline is the per-case value supplied by the dataset. There is no universal hardcoded 90-day rule.

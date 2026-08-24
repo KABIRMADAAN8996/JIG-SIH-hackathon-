@@ -1,0 +1,31 @@
+FIR Number: FIR-505/2026
+Filed Date: 2026-01-10
+Police Station: Central District Police Station
+
+Complainant: Suresh Malhotra
+Accused: Neha Kapoor
+Sections: SEC-505
+
+Case Number: CR-505/26
+Registration Date: 2026-01-20
+Court: District Court
+Status: ongoing
+
+Chargesheet Filed: false
+Chargesheet Deadline: 2026-04-20
+
+Hearing ID: H-501
+Hearing Date: 2026-05-15
+Hearing Type: bail hearing
+Outcome: adjourned
+
+Hearing ID: H-502
+Hearing Date: 2026-07-05
+Hearing Type: bail hearing
+Outcome: adjourned
+
+Order ID: O-501
+Order Date: 2026-07-05
+Order Type: adjournment order
+Judge/Court: District Court
+Summary: The hearing was adjourned with no next date fixed, and the chargesheet had still not been filed.

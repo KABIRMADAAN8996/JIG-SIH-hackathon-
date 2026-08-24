@@ -1,0 +1,16 @@
+FIR Number: FIR-303/2026
+Filed Date: 2026-05-25
+Police Station: East District Police Station
+
+Complainant: Anil Kumar
+Accused: Rohan Verma
+Sections: SEC-303
+
+Case Number: CR-303/26
+Registration Date: 2026-06-10
+Court: District Court
+Status: ongoing
+
+Chargesheet Filed: true
+Chargesheet Date: 2026-07-20
+Chargesheet Deadline: 2026-09-08

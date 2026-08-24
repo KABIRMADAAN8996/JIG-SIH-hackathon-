@@ -11,6 +11,8 @@ export default function App() {
   const [caseId, setCaseId] = useState(null);
 
   function handleSelectCase(id) {
+    if (!id) return;
+
     setCaseId(id);
     setView("graph");
   }
